@@ -2,49 +2,54 @@
 <html>
 <head>
 	<title>Pruebas de Software</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<style type="text/css">
-		body {
-		    background-color: #a0c3f7;
-		    top: 5px;
-		}
-		h1, h2, h3, h4, h5, table{
-		    font-family: 'Lobster', cursive;
-		    font-style: oblique
-		}
-		p , input{
-		    font-family: 'Lobster', cursive;
-		    font-size: 120%;    
-		}
-		.row.content {height: 60%}
-		footer {
-		    background-color: #555;
-		    color: white;
-		    padding: 15px;
-		}
-		.footer {
-			position: fixed;
-			bottom: 0;
-			width: 100%;
-		}
-		th {
-			background-color: #90B4F5
-		}
-	</style>
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<meta charset="utf-8">
 </head>
 <body>
 	<!--<form >
 		<input type="file" name="file"><br /><br />
 		<input type="submit" value="Upload">
 	</form>-->
-	<div class="jumbotron text-center">
-		<h1>Pruebas de Software</h1>
-		<h1>Programa 3</h1>
-	</div>
+
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#" class="brand-logo center">Programa 3</a>
+		</div>
+	</nav>
 
 	<div class="container">
-		<div class="row content">
+		<div class="row">
+			<span>Para realizar el cálculo de la predicción se usarán datos aleatorios. A continuacion ingrese el la cantidad de números (N) que desea generar, su rango (min,max), y el valor (Xk) a predecir:</span>
+		</div>
+		<div class="row">
+			<form class="col s12" action="calcular" method="post">
+				<div class="row">
+					<div class="input-field col s3">
+	          			<input id="numeros" type="text" class="validate">
+	          			<label for="numeros">N:</label>
+	        		</div>
+			        <div class="input-field col s3">
+			          <input id="min" type="number" class="validate">
+			          <label for="min">Min:</label>
+			        </div>
+			        <div class="input-field col s3">
+			          <input id="max" type="number" class="validate">
+			          <label for="max">Max:</label>
+			        </div>
+			        <div class="input-field col s3">
+			          <input id="xk" type="number" class="validate">
+			          <label for="xk">Xk:</label>
+			        </div>
+			        <div class="input-field col s3">
+						<input class="waves-effect waves-light btn" type="submit" value="Generar">
+			        </div>
+				</div>			
+			</form>
+		</div>
+	</div>
+
+	<!--<div class="container">
+		<div class="row">
 			<div class="col-sm-3 sidenav">     
 			</div>            
 			<div class="col-sm-6">
@@ -56,10 +61,24 @@
 			</div>
 		</div>
 	</div>
-	<footer class="footer">
-		<p>Universidad de Antioquia - Pruebas de Software</p>
-	</footer>
+-->
+	<footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h5 class="white-text">Pruebas de Software</h5>	
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017 Universidad de Antioquia
+        </div>
+      </div>
+    </footer>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
 </body>
 </html>
