@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas de Software</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		body {
+		    background-color: #a0c3f7;
+		    top: 5px;
+		}
+		h1, h2, h3, h4, h5, table{
+		    font-family: 'Lobster', cursive;
+		    font-style: oblique
+		}
+		p , input{
+		    font-family: 'Lobster', cursive;
+		    font-size: 120%;    
+		}
+		.row.content {height: 60%}
+		footer {
+		    background-color: #555;
+		    color: white;
+		    padding: 15px;
+		}
+		.footer {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+		th {
+			background-color: #90B4F5
+		}
+	</style>
+	
+</head>
+<body>
+	<!--<form >
+		<input type="file" name="file"><br /><br />
+		<input type="submit" value="Upload">
+	</form>-->
+	<div class="jumbotron text-center">
+		<h1>Pruebas de Software</h1>
+		<h1>Programa 3</h1>
+	</div>
+
+	<div class="container">
+		<div class="row content">
+			<div class="col-sm-3 sidenav">     
+			</div>            
+			<div class="col-sm-6">
+				<form action="upload" method="post" enctype="multipart/form-data">
+					<p>Por favor ingrese un archivo .txt con los números que desea evaluar separados por salto de linea</p>
+					<input type="file" name="file" id="logo" class="btn btn-secondary btn-block">
+					<input class="btn btn-primary btn-block" type="submit" value="Calculate">
+				</form>				
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<p>Universidad de Antioquia - Pruebas de Software</p>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
