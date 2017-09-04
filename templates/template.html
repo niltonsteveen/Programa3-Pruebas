@@ -4,6 +4,16 @@
 	<title>Pruebas de Software</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<meta charset="utf-8">
+	<style>
+		body {
+		    display: flex;
+		    min-height: 100vh;
+		    flex-direction: column;
+		}
+		main {
+			flex: 1 0 auto;
+		}
+	</style>
 </head>
 <body>
 	<!--<form >
@@ -11,67 +21,65 @@
 		<input type="submit" value="Upload">
 	</form>-->
 
-	<nav>
+	<nav class="deep-purple darken-2">
 		<div class="nav-wrapper">
 			<a href="#" class="brand-logo center">Programa 3</a>
 		</div>
 	</nav>
-
-	<div class="container">
-		<div class="row">
-			<span>Para realizar el cálculo de la predicción se usarán datos aleatorios. A continuacion ingrese el la cantidad de números (N) que desea generar, su rango (min,max), y el valor (Xk) a predecir:</span>
-		</div>
-		<div class="row">
-			<form class="col s12" action="calcular" method="post">
-				<div class="row">
-					<div class="input-field col s3">
-	          			<input id="numeros" type="text" class="validate">
-	          			<label for="numeros">N:</label>
-	        		</div>
-			        <div class="input-field col s3">
-			          <input id="min" type="number" class="validate">
-			          <label for="min">Min:</label>
-			        </div>
-			        <div class="input-field col s3">
-			          <input id="max" type="number" class="validate">
-			          <label for="max">Max:</label>
-			        </div>
-			        <div class="input-field col s3">
-			          <input id="xk" type="number" class="validate">
-			          <label for="xk">Xk:</label>
-			        </div>
-			        <div class="input-field col s3">
-						<input class="waves-effect waves-light btn" type="submit" value="Generar">
-			        </div>
-				</div>			
-			</form>
-		</div>
-	</div>
-
-	<!--<div class="container">
-		<div class="row">
-			<div class="col-sm-3 sidenav">     
-			</div>            
-			<div class="col-sm-6">
-				<form action="upload" method="post" enctype="multipart/form-data">
-					<p>Por favor ingrese un archivo .txt con los números que desea evaluar separados por salto de linea</p>
-					<input type="file" name="file" id="logo" class="btn btn-secondary btn-block">
-					<input class="btn btn-primary btn-block" type="submit" value="Calculate">
-				</form>				
+	<main>
+		<div class="container" style="margin-top: 40px">
+			<div class="row">
+				<span>Para realizar el cálculo de la predicción se usarán datos aleatorios. A continuacion ingrese el la cantidad de números (N) que desea generar, su rango (min,max), y el valor (Xk) a predecir:</span>
+			</div>
+			<div class="row">
+				<form class="col s12" action="calcular" method="post">
+					<div class="row">
+						<div class="input-field col s2">
+		          			<input id="numeros" type="number" class="validate" required>
+		          			<label for="numeros">N:</label>
+		        		</div>
+				        <div class="input-field col s2">
+				          <input id="min" type="number" class="validate" required>
+				          <label for="min">Min:</label>
+				        </div>
+				        <div class="input-field col s2">
+				          <input id="max" type="number" class="validate" required>
+				          <label for="max">Max:</label>
+				        </div>
+				        <div class="input-field col s2">
+				          <input id="xk" type="number" class="validate" required>
+				          <label for="xk">Xk:</label>
+				        </div>
+				        <div class="input-field col s4">
+							<input class="waves-effect waves-light btn col s12" type="submit" value="Generar">
+				        </div>
+					</div>			
+				</form>
+				<table class="striped centered responsive-table">
+					<thead>
+			          <tr>
+			          	  <th>n</th>
+			              <th>x</th>
+			              <th>y</th>
+			              <th>x²</th>
+			              <th>x*y</th>
+			              <th>y²</th>
+			          </tr>
+			        </thead>
+				</table>
 			</div>
 		</div>
-	</div>
--->
-	<footer class="page-footer">
+	</main>
+	<footer class="page-footer deep-purple darken-2">
       <div class="container">
         <div class="row">
-          <div class="col s12">
-            <h5 class="white-text">Pruebas de Software</h5>	
+          <div class="col s4 offset-s4">
+            <h5 class="white-text center-align">Pruebas de Software</h5>	
           </div>
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container">
+        <div class="container center-align">
         © 2017 Universidad de Antioquia
         </div>
       </div>

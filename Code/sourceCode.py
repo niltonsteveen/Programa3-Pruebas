@@ -6,6 +6,9 @@ class Programa3(object):
 	def __init__(self):
 		self.x=None
 		self.y=None
+		self.x2=None
+		self.y2=None
+		self.xy=None
 		self.sumXiYi=0
 		self.xMedia=0
 		self.yMedia=0
@@ -26,8 +29,11 @@ class Programa3(object):
 			self.y.append(random.randrange(min,max))
 
 	def SumXiYi(self):
+		self.xy=[]
 		for i in range(0,len(self.x)):
-			self.sumXiYi=self.sumXiYi+(self.x[i]*self.y[i])		
+			valor=self.x[i]*self.y[i]
+			self.xy.append(valor)
+			self.sumXiYi=self.sumXiYi+valor		
 
 	def calcularMedias(self):
 		for i in range(0,len(self.x)):
@@ -37,12 +43,18 @@ class Programa3(object):
 		self.yMedia=self.yMedia/len(self.y)
 
 	def SumXiCuadrada(self):
+		self.x2=[]
 		for i in range(0,len(self.x)):
-			self.sumXiCuadrada=self.sumXiCuadrada+math.pow(self.x[i],2)
+			valor=math.pow(self.x[i],2)
+			self.x2.append(valor)
+			self.sumXiCuadrada=self.sumXiCuadrada+valor
 
 	def SumYiCuadrada(self):
+		self.y2=[]
 		for i in range(0,len(self.y)):
-			self.sumYiCuadrada=self.sumYiCuadrada+math.pow(self.y[i],2)
+			valor=math.pow(self.y[i],2)
+			self.y2.append(valor)
+			self.sumYiCuadrada=self.sumYiCuadrada+valor
 
 	def SumXi(self):
 		for i in range(0,len(self.x)):
@@ -57,12 +69,10 @@ class Programa3(object):
 		self.calcularMedias()
 		self.SumXiCuadrada()
 		self.B1=((self.sumXiYi)-(len(self.x)*self.xMedia*self.yMedia))/((self.sumXiCuadrada)-(len(self.x)*math.pow(self.xMedia,2)))
-		print(self.B1)
 		self.CalcularB0()
 
 	def CalcularB0(self):
 		self.B0=(self.yMedia)-(self.B1*self.xMedia)
-		print(self.B0)
 
 	def CalcularCoeficiente(self):
 		self.SumXiYi()
