@@ -1,5 +1,6 @@
 import os
 from flask import Flask, request, render_template
+from Code.sourceCode import Programa3
 
 app=Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -7,6 +8,17 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 @app.route("/")
 def index():
 	return render_template("template.html")
+
+@app.route('/calcular' , methods=['POST'])
+def calcular():
+	if request.method == 'POST':
+		n = request.form['n']
+		xk = request.form['xk']
+		minn = request.form['min']
+		maxx = request.form['max']
+		prg3 = Programa3()
+		prg3.CalcularPrediccion(xk)	
+		return render_template("template.html", x=prg3.x, y=prg3.y, xcuadrada=prg3.x2, ycuadrada=prg3.y2, xy=prg3.xy, prediccion=prg3.yk, xmedia=prg3.xMedia, ymedia=prg3.yMedia, sumx2=prg3.sumXiCuadrada, sumy2=sumYiCuadrada, sumxy=prg3.sumXiYi, b0=prg3.B0, b1=prg3.B1)
 
 if __name__ == '__main__':
 	app.run()
