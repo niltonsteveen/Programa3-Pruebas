@@ -91,5 +91,7 @@ class Programa3(object):
 		self.SumYiCuadrada()
 		self.SumXi()
 		self.SumYi()
+		self.CalcularB1()
+		self.CalcularB0()
 		self.r=((len(self.x)*self.sumXiYi)-(self.sumXi*self.sumYi))/math.sqrt(((len(self.x)*self.sumXiCuadrada)-(math.pow(self.sumXi,2)))*((len(self.y)*self.sumYiCuadrada)-(math.pow(self.sumYi,2))))
 		self.yk=self.B0+(self.B1*int(xk))
