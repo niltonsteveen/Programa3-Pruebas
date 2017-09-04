@@ -67,14 +67,14 @@
 			          </tr>
 			        </thead>
 			        <tbody>
-						{% for i in x %}
+						{% for i in range (0, len(salida.x)) %}
 							<tr>
 								<td>{{i}}</td>
-								<td>{{x[i]}}</td>
-								<td>{{y[i]}}</td>
-								<td>{{xcuadrada[i]}}</td>
-								<td>{{xy[i]}}</td>
-								<td>{{ycuadrada[i]}}</td>
+								<td>{{salida[x][i]}}</td>
+								<td>{{salida[y][i]}}</td>
+								<td>{{salida[xcuadrada][i]}}</td>
+								<td>{{salida[xy][i]}}</td>
+								<td>{{salida[ycuadrada][i]}}</td>
 							</tr>
 						{% endfor %}
 			        </tbody>
