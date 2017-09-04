@@ -84,7 +84,7 @@ class Programa3(object):
 		self.r=((len(self.x)*self.sumXiYi)-(self.sumXi*self.sumYi))/math.sqrt(((len(self.x)*self.sumXiCuadrada)-(math.pow(self.sumXi,2)))*((len(self.y)*self.sumYiCuadrada)-(math.pow(self.sumYi,2))))
 
 	def CalcularPrediccion(self, xk, minn, maxx, n):
-		self.generarAleatorios(minn,maxx,n)
+		self.generarAleatorios(int(minn),int(maxx),int(n))
 		self.SumXiYi()
 		self.calcularMedias()
 		self.SumXiCuadrada()
