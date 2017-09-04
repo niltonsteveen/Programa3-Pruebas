@@ -57,6 +57,26 @@
 				</form>
 				<table class="striped centered responsive-table">
 					<thead>
+						<tr>
+							<td>B0</td>
+							<td>B1</td>
+							<td>Xk</td>
+							<td>r(x,y)</td>
+							<td>Yk=B0+B1*Xk</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{b0}}</td>
+							<td>{{b1}}</td>
+							<td>{{xk}}</td>
+							<td>{{r}}</td>
+							<td>{{prediccion}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="striped centered responsive-table">
+					<thead>
 			          <tr>
 			          	  <th>n</th>
 			              <th>x</th>
@@ -77,6 +97,22 @@
 								<td>{{ycuadrada[i]}}</td>
 							</tr>
 						{% endfor %}
+						<tr>
+							<td>Total</td>
+							<td>Sum(Xi) = {{sumXi}}</td>
+							<td>Sum(Yi) = {{sumYi}}</td>
+							<td>Sum(Xi²) = {{sumx2}}</td>
+							<td>Sum(X*Y) = {{sumxy}}</td>
+							<td>Sum(Yi²) = {{sumy2}}</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Xavg = {{xmedia}}</td>
+							<td>Yavg = {{ymedia}}</td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
 			        </tbody>
 				</table>
 			</div>
