@@ -66,6 +66,18 @@
 			              <th>y²</th>
 			          </tr>
 			        </thead>
+			        <tbody>
+						{% for i in x %}
+							<tr>
+								<td>{{i}}</td>
+								<td>{{x[i]}}</td>
+								<td>{{y[i]}}</td>
+								<td>{{xcuadrada[i]}}</td>
+								<td>{{xy[i]}}</td>
+								<td>{{ycuadrada[i]}}</td>
+							</tr>
+						{% endfor %}
+			        </tbody>
 				</table>
 			</div>
 		</div>
