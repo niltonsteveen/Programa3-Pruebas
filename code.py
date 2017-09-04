@@ -17,7 +17,7 @@ def calcular():
 		minn = request.form['min']
 		maxx = request.form['max']
 		numeros=[]
-		for i in range(0,n):
+		for i in range(0,int(n)):
 			numeros.append(i)
 		print(n, xk, minn, maxx)
 		prg3 = Programa3()
